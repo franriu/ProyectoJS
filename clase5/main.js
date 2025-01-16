@@ -30,7 +30,9 @@ function Producto (id, nombre,importe,stock){ //primera inicial en mayuscula par
 
 const producto1 = new Producto(1,"teclado",35000, 17)
 
-const producto2 = new Producto(1."mouse",35000, 17)
+const producto2 = new Producto(1,"mouse",35000, 17)
 
 const producto3 = new Producto(1,"monitor",35000,17 )
+
+
 
