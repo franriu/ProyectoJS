@@ -21,7 +21,7 @@ let producto6 =new Producto("osiris",300000)
 let lista = [producto1,producto2,producto3,producto4.producto5,producto6]
 
 function filtrarProducto(){
-    let palabraClave = promp("ingresa el sneaker que buscas")
+    let palabraClave = prompt("ingresa el sneaker que buscas")
     let resultado = lista.filter((x)=>x.nombre.toUpperCase().includes(palabraClave))
     if (resultado.length>0){
         console.table(resultado)
@@ -46,5 +46,10 @@ if(isNaN(precio) || isNaN(talle) || nombre ==""){
 let producto = new Producto (nombre,talle,stock)
 lista.push(producto)
 console.table(lista)
-
 }
+
+//BOTONERA
+
+let filtrar = document.getElementById("filtrar")
+filtrar.addEventListener("click",filtrarProducto)
+
