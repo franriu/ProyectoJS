@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Buscador de Productos</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        .producto { margin: 10px 0; }
+        .producto p { margin: 5px 0; }
+    </style>
 </head>
 <body>
     
 
+    <h1>Buscador de Sneakers</h1>
 
-
-    <button id="filtrar">Filtrar producto</button>
-
+    <!-- Cuadro de búsqueda -->
+    <input type="text" id="buscador" placeholder="Buscar producto..." oninput="filtrarProductos()">
+    
+    <!-- Contenedor para los productos -->
+    <div id="productos-lista">
+    <!-- Los productos se mostrarán aquí -->
+    </div>
 
     <script src="main.js"></script>
 </body>
