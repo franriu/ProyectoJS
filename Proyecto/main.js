@@ -7,7 +7,7 @@ Swal.fire({
 
 // Lista de productos
 const productos = [
-    { id: 1, nombre: "Jordan 1", año: 1985, descripcion: "El primer modelo de la colección y seguramente el más popular. Llevaron el sobrenombre de «Notorious» y convirtieron a Michael Jordan en «Rookie of the Year».", categoria: "Deportes" },
+    { id: 1, nombre: "Jordan 1", año: 1985, descripcion:"El primer modelo de la colección y seguramente el más popular. Llevaron el sobrenombre de «Notorious» y convirtieron a Michael Jordan en «Rookie of the Year».", categoria: "Deportes"},
     { id: 2, nombre: "Jordan 2", año: 1986, descripcion: "Se fabricaron en Italia y por eso recibieron el sobrenombre de «Itallian Stallion».", categoria: "Deportes" },
     { id: 3, nombre: "Jordan 3", año: 1987, descripcion: "Fueron las primeras en incluir el logo Jumpman ", categoria: "Deportes" },
     { id: 4, nombre: "Jordan 4", año: 1988, descripcion: "Fueron la prueba definitiva de que las zapatillas de la marca se convertían en iconos del streetwear", categoria: "streetwear" },
@@ -82,11 +82,12 @@ function mostrarProductos(productos) {
     });
 }
 
+
   // Mostrar todos los productos inicialmente
-mostrarProductos(productos);
+  mostrarProductos(productos);
 
+const divImage = document.querySelector('#image')
+const img =document.createElement('img')
 
-const div = document.querySelector('#jordan1')
-const img = document.createElement('img')
-img.src = 'j1.jpg'
-div.appendChild(img)
+img.src ='j1.jpg'
+img.width = 400 
