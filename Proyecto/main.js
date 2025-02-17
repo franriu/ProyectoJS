@@ -82,12 +82,32 @@ function mostrarProductos(productos) {
     });
 }
 
+// Mostrar todos los productos inicialmente
+mostrarProductos(productos);
 
-  // Mostrar todos los productos inicialmente
-  mostrarProductos(productos);
+ // Función para obtener un chiste de la API
+ function getJoke() {
+    // Obtener el valor de la categoría seleccionada
+    const category = document.getElementById('category').value;
 
-const divImage = document.querySelector('#image')
-const img =document.createElement('img')
+    // URL de la API de JokeAPI
+    const apiUrl = `https://v2.jokeapi.dev/joke/${category}?lang=es&type=single`;
 
-img.src ='j1.jpg'
-img.width = 400 
+    // Realizar la solicitud a la API
+    fetch(apiUrl)
+        .then(response => response.json()) // Convertir la respuesta en JSON
+        .then(data => {
+            // Verificar si el chiste es de tipo "single" (un solo chiste)
+            if (data.type === 'single') {
+                document.getElementById('joke').textContent = data.joke;
+            } else {
+                // Si es un chiste de tipo "twopart" (dos partes)
+                document.getElementById('joke').textContent = `${data.setup} - ${data.delivery}`;
+            }
+        })
+        .catch(error => {
+            // Manejar errores
+            console.error('Error al obtener el chiste:', error);
+            document.getElementById('joke').textContent = 'Hubo un error al obtener el chiste.';
+        });
+}

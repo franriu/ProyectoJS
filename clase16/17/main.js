@@ -7,3 +7,12 @@
 //FETCH : se emplea para traer informacion almacenada se utiliza en conjunto con ajax
 
 
+//estructura de fetch
+
+/*
+fetch(`https://api.example.com/data`) // envio peticion 
+.then(reponse=>reponse.json()) //convierto respuesta a json
+.then (data=>console.log(data)) //puedo trabajar con los datos recibidos
+*/
+
+
